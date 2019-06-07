@@ -7,6 +7,7 @@ class Blog(models.Model):
     date = models.DateField(default=django.utils.timezone.now)
     title = models.CharField(max_length=50)
     body = models.TextField()
+    img = models.URLField(max_length=200, blank='True')
 
     def __str__(self):
         return self.title
